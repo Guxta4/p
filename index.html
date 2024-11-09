@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Conteúdos</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #resultado { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Pesquisa de Conteúdo</h1>
+    <input type="text" id="campoPesquisa" placeholder="Digite 'Resumo do livro' ou 'materia'">
+    <button onclick="pesquisar()">Pesquisar</button>
+    <div id="resultado"></div>
+
+    <script>
+        function pesquisar() {
+            const termo = document.getElementById("campoPesquisa").value.toLowerCase();
+            let resultado = document.getElementById("resultado");
+
+            if (termo === "resumo do livro") {
+                resultado.innerHTML = `
+                    <h2>Mestre dos Games</h2>
+                    <p><strong>Resumo:</strong> Um resumo completo sobre 'Mestre dos Games' que inclui o enredo, temas principais e análise dos personagens.</p>
+                    <p><strong>Partes:</strong> Parte 1: Introdução aos Jogos, Parte 2: Conflitos, Parte 3: A Jornada Final.</p>
+                    <p><strong>Personagens:</strong> Protagonista: Alex, Antagonista: Max, Aliado: Joana.</p>
+                `;
+            } else if (termo === "materia") {
+                resultado.innerHTML = `
+                    <h2>Matérias</h2>
+                    <h3>História</h3>
+                    <p>Feudalismo, Feudo, As marcas da desigualdade, Uns oram, Outros combatem, Outros, enfim, trabalham, Corveia, Talha, Banalidade, Capitação, Mão-morta, Tostão de Pedro, Uma vida de (muito) trabalho, Os mosteiros e a cultura na Idade Média, Os mosteiros e a escola para poucos, Uma cultura de fé, Crença, poder e medo, Bruxas e demônios, Perseguição às práticas ancestrais, Mulheres na Idade Média.</p>
+                    
+                    <h3>Matemática</h3>
+                    <p>Volume de poliedros, múltiplos e divisores, primos e fatores primos de um número, frações equivalentes.</p>
+                    
+                    <h3>Geografia</h3>
+                    <p>Domínio da natureza, o extrativismo vegetal, pecuária.</p>
+                `;
+            } else {
+                resultado.innerHTML = "<p>Termo não encontrado. Tente 'Resumo do livro' ou 'materia'.</p>";
+            }
+        }
+    </script>
+</body>
+</html>
