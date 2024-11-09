@@ -3,10 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busca de Conteúdos</title>
+    <title>Página de Pesquisa</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        #resultado { margin-top: 20px; }
+        /* Fundo */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cabeçalho e Botão */
+        h1 {
+            color: #4CAF50;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Área de Resultado */
+        #resultado {
+            margin-top: 30px;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2, h3 {
+            color: #4CAF50;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
